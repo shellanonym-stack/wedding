@@ -3,7 +3,7 @@ import '../styles/MusicPlayer.css';
 
 const MusicPlayer = ({ isPlaying, toggleMusic }) => {
     // Standard wedding instrumental URL or local file
-    const audioUrl = "src/assets/audio/thousand.mp3";
+    const audioUrl = "/assets/audio/thousand.mp3";
     const audioRef = useRef(new Audio(audioUrl));
 
     useEffect(() => {
