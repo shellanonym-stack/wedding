@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import '../styles/OpeningModal.css';
 import '../styles/FloralDecoration.css'; // Re-use floral styles if needed
-import floralImg from '../assets/gambar/floral-corner.png'; // Re-use existing asset
+const floralImg = '/assets/gambar/floral-corner.png'; // Re-use existing asset
 
 const OpeningModal = ({ onOpen }) => {
     const [isOpen, setIsOpen] = useState(false);
@@ -34,11 +34,9 @@ const OpeningModal = ({ onOpen }) => {
             <div className="modal-bg">
                 {/* Use the same hero bg or specific cover bg */}
                 <img
-                    src="src/assets/gambar/Back.jpg"
+                    src="/assets/gambar/Back.jpg"
                     alt="Cover Background"
-                    onError={(e) => {
-                        e.target.src = "https://images.unsplash.com/photo-1519741497674-611481863552?w=1920&q=80";
-                    }}
+
                 />
             </div>
 

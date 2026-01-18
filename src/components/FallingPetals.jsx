@@ -1,6 +1,6 @@
 import React, { useMemo } from 'react';
 import '../styles/FallingPetals.css';
-import petalImg from '../assets/gambar/petal.png';
+const petalImg = '/assets/gambar/petal.png';
 
 const FallingPetals = ({ count = 10 }) => {
     // Use useMemo to generate petals only once, avoiding re-renders

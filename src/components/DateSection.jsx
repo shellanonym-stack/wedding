@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import '../styles/DateSection.css';
 import { Calendar, Clock, Heart } from 'lucide-react';
-import floralDivider from '../assets/gambar/floral-divider.png';
+const floralDivider = '/assets/gambar/floral-divider.png';
 import FloralDecoration from './FloralDecoration';
 
 const DateSection = () => {

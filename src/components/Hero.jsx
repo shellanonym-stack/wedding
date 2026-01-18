@@ -26,11 +26,9 @@ const Hero = () => {
             >
                 {/* Background image - replace with local image */}
                 <img
-                    src="src/assets/gambar/Back.jpg"
+                    src="/assets/gambar/Back.jpg"
                     alt="Wedding Background"
-                    onError={(e) => {
-                        e.target.src = "https://images.unsplash.com/photo-1519741497674-611481863552?w=1920&q=80";
-                    }}
+
                 />
                 <div className="overlay"></div>
             </div>

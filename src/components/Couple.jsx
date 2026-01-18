@@ -1,12 +1,10 @@
 import React from 'react';
 import '../styles/Couple.css';
 import { Heart } from 'lucide-react';
-import floralDivider from '../assets/gambar/floral-divider.png';
+const floralDivider = '/assets/gambar/floral-divider.png';
 
 const Couple = () => {
-    const handleImageError = (e, fallbackUrl) => {
-        e.target.src = fallbackUrl;
-    };
+
 
     return (
         <section className="section couple-section" id="couple">
@@ -21,9 +19,9 @@ const Couple = () => {
                     <div className="couple-card groom">
                         <div className="image-frame">
                             <img
-                                src="src/assets/gambar/groom.jpg"
+                                src="/assets/gambar/groom.jpg"
                                 alt="Groom"
-                                onError={(e) => handleImageError(e, "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&q=80")}
+
                             />
                         </div>
                         <h3>Edo Irawan</h3>
@@ -38,9 +36,9 @@ const Couple = () => {
                     <div className="couple-card bride">
                         <div className="image-frame">
                             <img
-                                src="src/assets/gambar/bride.jpg"
+                                src="/assets/gambar/bride.jpg"
                                 alt="Bride"
-                                onError={(e) => handleImageError(e, "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=600&q=80")}
+
                             />
                         </div>
                         <h3>S Qhori Rafni Rivani</h3>

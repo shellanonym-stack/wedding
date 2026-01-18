@@ -1,14 +1,14 @@
 import React, { useState, useEffect, useRef } from 'react';
 import '../styles/Gallery.css';
 import { ChevronLeft, ChevronRight, X } from 'lucide-react';
-import floralDivider from '../assets/gambar/floral-divider.png';
+const floralDivider = '/assets/gambar/floral-divider.png';
 
 // Using local images - place your images in assets/gambar folder
 const photos = [
-    { id: 1, src: 'src/assets/gambar/gallery1.jpg', alt: 'Moment 1' },
-    { id: 2, src: 'src/assets/gambar/gallery2.jpg', alt: 'Moment 2' },
-    { id: 3, src: 'src/assets/gambar/gallery3.jpg', alt: 'Moment 3' },
-    { id: 5, src: 'src/assets/gambar/gallery5.jpg', alt: 'Moment 5' },
+    { id: 1, src: '/assets/gambar/gallery1.jpg', alt: 'Moment 1' },
+    { id: 2, src: '/assets/gambar/gallery2.jpg', alt: 'Moment 2' },
+    { id: 3, src: '/assets/gambar/gallery3.jpg', alt: 'Moment 3' },
+    { id: 5, src: '/assets/gambar/gallery5.jpg', alt: 'Moment 5' },
 ];
 
 const Gallery = () => {

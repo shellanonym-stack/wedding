@@ -1,7 +1,7 @@
 import React from 'react';
 import '../styles/Location.css';
 import { MapPin, Navigation, Clock, Calendar } from 'lucide-react';
-import floralDivider from '../assets/gambar/floral-divider.png';
+const floralDivider = '/assets/gambar/floral-divider.png';
 import FloralDecoration from './FloralDecoration';
 
 const Location = () => {
@@ -69,7 +69,7 @@ const Location = () => {
                         <h3>Masjid Al-Barokah</h3>
                         <p className="address">
                             Jl. Karang Sari<br />
-                           Neglasari, Kota Tangerang, Banten<br />
+                            Neglasari, Kota Tangerang, Banten<br />
                             Indonesia 15129
                         </p>
                     </div>

@@ -1,6 +1,6 @@
 import React from 'react';
 import '../styles/FloralDecoration.css';
-import floralCorner from '../assets/gambar/floral-corner.png';
+const floralCorner = '/assets/gambar/floral-corner.png';
 
 const FloralDecoration = ({ position = 'top-left', className = '' }) => {
     return (

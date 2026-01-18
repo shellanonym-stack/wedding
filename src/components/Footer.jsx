@@ -1,7 +1,7 @@
 import React from 'react';
 import '../styles/Footer.css';
 import { Heart } from 'lucide-react';
-import floralDivider from '../assets/gambar/floral-divider.png';
+const floralDivider = '/assets/gambar/floral-divider.png';
 
 const Footer = () => {
     return (

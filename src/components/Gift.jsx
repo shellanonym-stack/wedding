@@ -42,7 +42,7 @@ const Gift = () => {
                         <div className="bank-card" key={account.id}>
                             <div className="bank-logo">
                                 <img
-                                    src={`src/assets/gambar/${account.logo}`}
+                                    src={`/assets/gambar/${account.logo}`}
                                     alt={`${account.bank} Logo`}
                                     onError={(e) => {
                                         e.target.style.display = 'none';
