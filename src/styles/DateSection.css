@@ -1,0 +1,236 @@
+.date-section {
+    background: transparent;
+    text-align: center;
+    position: relative;
+    contain: layout;
+}
+
+.date-content {
+    position: relative;
+    z-index: 1;
+}
+
+.section-floral-divider {
+    width: clamp(120px, 30vw, 180px);
+    height: auto;
+    margin: 0 auto 0.75rem;
+    opacity: 0.85;
+}
+
+.section-subtitle {
+    font-family: var(--font-body);
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    font-size: var(--fs-sm);
+    font-style: italic;
+    opacity: 0.85;
+}
+
+.date-display {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+    flex-wrap: wrap;
+}
+
+.date-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    background: var(--gradient-card);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    padding: 1rem 1.5rem;
+    border-radius: 12px;
+    box-shadow: var(--shadow-soft);
+    transition: transform 0.3s ease;
+    border: var(--border-gold);
+}
+
+.date-item:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-glow);
+}
+
+.date-item .icon {
+    width: 28px;
+    height: 28px;
+    color: var(--accent-rose-gold);
+    flex-shrink: 0;
+}
+
+.date-text {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.date-day-name {
+    font-family: var(--font-body);
+    font-size: var(--fs-xs);
+    color: var(--text-secondary);
+    opacity: 0.75;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.date-full {
+    font-family: var(--font-heading);
+    font-size: var(--fs-base);
+    color: var(--text-heading);
+    font-weight: 600;
+}
+
+.date-separator {
+    animation: pulse 2s infinite;
+    color: var(--accent-rose-gold);
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.15);
+    }
+}
+
+/* Countdown Timer */
+.countdown-timer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.4rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.time-box {
+    background: var(--gradient-card);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    padding: 1rem 1.25rem;
+    border-radius: 12px;
+    min-width: 70px;
+    box-shadow: var(--shadow-soft);
+    transition: transform 0.3s ease;
+    border: var(--border-gold);
+}
+
+.time-box:hover {
+    transform: scale(1.03);
+    box-shadow: var(--shadow-glow);
+}
+
+.time-value {
+    display: block;
+    font-family: var(--font-heading);
+    font-size: var(--fs-xl);
+    font-weight: 700;
+    color: var(--text-heading);
+    line-height: 1;
+}
+
+.time-label {
+    display: block;
+    font-family: var(--font-body);
+    font-size: 0.65rem;
+    color: var(--accent-rose-gold);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 0.35rem;
+}
+
+.time-separator {
+    font-family: var(--font-heading);
+    font-size: var(--fs-lg);
+    color: var(--accent-rose-gold);
+    font-weight: 700;
+    opacity: 0.5;
+}
+
+/* Calendar Button */
+.add-to-calendar {
+    margin-top: 0.75rem;
+}
+
+.btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.875rem 1.75rem;
+    background: linear-gradient(135deg, var(--accent-rose-gold), var(--accent-copper));
+    color: var(--white);
+    border: none;
+    border-radius: 50px;
+    font-family: var(--font-heading);
+    font-size: var(--fs-sm);
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(212, 165, 116, 0.3);
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(212, 165, 116, 0.4);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .date-display {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+
+    .date-separator {
+        display: none;
+    }
+
+    .date-item {
+        width: 100%;
+        max-width: 280px;
+        justify-content: center;
+    }
+
+    .countdown-timer {
+        gap: 0.3rem;
+    }
+
+    .time-box {
+        min-width: 60px;
+        padding: 0.75rem 1rem;
+    }
+
+    .time-value {
+        font-size: var(--fs-lg);
+    }
+
+    .time-separator {
+        font-size: var(--fs-base);
+    }
+
+    .btn-primary {
+        padding: 0.75rem 1.5rem;
+    }
+}
+
+@media (max-width: 400px) {
+    .time-box {
+        min-width: 50px;
+        padding: 0.6rem 0.5rem;
+    }
+
+    .time-value {
+        font-size: var(--fs-base);
+    }
+
+    .time-label {
+        font-size: 0.55rem;
+    }
+}

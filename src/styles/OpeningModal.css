@@ -1,0 +1,201 @@
+.opening-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    background-color: var(--bg-primary);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: opacity 0.8s ease, transform 0.8s ease;
+    overflow: hidden;
+}
+
+.opening-modal.closed {
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-100%);
+}
+
+.modal-content {
+    position: relative;
+    z-index: 2;
+    padding: 1.5rem;
+    max-width: 450px;
+    width: 100%;
+}
+
+.modal-bg {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+}
+
+.modal-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: blur(2px) brightness(0.5);
+    transform: scale(1.05);
+}
+
+.modal-bg::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(26, 15, 20, 0.5) 0%, rgba(26, 15, 20, 0.85) 100%);
+}
+
+.opening-title {
+    font-family: var(--font-accent);
+    font-size: var(--fs-xs);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.85);
+    margin-bottom: 1.5rem;
+    animation: fadeInDown 0.8s ease-out;
+}
+
+.opening-couple {
+    font-family: var(--font-script);
+    font-size: var(--fs-script);
+    color: var(--white);
+    margin-bottom: 2.5rem;
+    line-height: 1.2;
+    text-shadow: 0 4px 25px rgba(0, 0, 0, 0.4);
+    animation: zoomIn 1.2s ease-out;
+}
+
+.guest-info {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    padding: 1.5rem;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    margin-bottom: 1.5rem;
+    animation: fadeInUp 0.8s ease-out 0.4s backwards;
+}
+
+.guest-label {
+    font-family: var(--font-body);
+    font-size: var(--fs-xs);
+    color: rgba(255, 255, 255, 0.75);
+    margin-bottom: 0.35rem;
+}
+
+.guest-name {
+    font-family: var(--font-heading);
+    font-size: var(--fs-md);
+    color: var(--white);
+    font-weight: 600;
+    margin-bottom: 0.35rem;
+}
+
+.btn-open {
+    padding: 0.875rem 2rem;
+    background: linear-gradient(135deg, var(--accent-rose-gold), var(--accent-copper));
+    color: var(--white);
+    border: none;
+    border-radius: 50px;
+    font-family: var(--font-heading);
+    font-size: var(--fs-sm);
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 4px 20px rgba(212, 165, 116, 0.4);
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    animation: fadeInUp 0.8s ease-out 0.8s backwards;
+}
+
+.btn-open:hover {
+    transform: translateY(-2px) scale(1.03);
+    box-shadow: 0 6px 25px rgba(212, 165, 116, 0.5);
+}
+
+.btn-open svg {
+    width: 18px;
+    height: 18px;
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 0.85;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes zoomIn {
+    from {
+        opacity: 0;
+        transform: scale(0.85);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@media (max-width: 480px) {
+    .opening-couple {
+        font-size: clamp(2rem, 1.5rem + 3vw, 2.8rem);
+    }
+
+    .modal-content {
+        padding: 1.25rem;
+    }
+
+    .guest-info {
+        padding: 1.25rem;
+    }
+}
+
+@media (max-height: 550px) and (orientation: landscape) {
+    .opening-couple {
+        font-size: clamp(1.8rem, 1.3rem + 1.5vw, 2.2rem);
+        margin-bottom: 1rem;
+    }
+
+    .modal-content {
+        padding: 0.75rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100%;
+    }
+
+    .guest-info {
+        padding: 0.6rem;
+        margin-bottom: 0.6rem;
+    }
+
+    .opening-title {
+        margin-bottom: 0.4rem;
+        font-size: 0.65rem;
+    }
+
+    .btn-open {
+        padding: 0.6rem 1.5rem;
+    }
+}

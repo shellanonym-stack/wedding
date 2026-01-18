@@ -1,0 +1,136 @@
+.footer {
+    background: linear-gradient(180deg, var(--bg-secondary) 0%, #1a0f14 100%);
+    color: var(--text-primary);
+    text-align: center;
+    padding: 3rem 1rem 2.5rem;
+    position: relative;
+    contain: layout;
+}
+
+.footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--accent-rose-gold), transparent);
+}
+
+.footer-floral {
+    width: clamp(100px, 25vw, 140px);
+    height: auto;
+    margin: 0 auto 1.25rem;
+    opacity: 0.75;
+}
+
+.thank-you {
+    font-family: var(--font-accent);
+    font-size: var(--fs-xs);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    opacity: 0.75;
+    margin-bottom: 0.4rem;
+    color: var(--text-secondary);
+}
+
+.couple-script {
+    font-family: var(--font-script);
+    font-size: var(--fs-2xl);
+    margin-bottom: 1.75rem;
+    color: var(--text-heading);
+}
+
+.footer-quote {
+    max-width: 550px;
+    margin: 0 auto 1.75rem;
+    padding: 1.25rem;
+    background: rgba(42, 29, 36, 0.5);
+    border-radius: 12px;
+    border: 1px solid rgba(212, 165, 116, 0.15);
+}
+
+.footer-quote p {
+    font-family: var(--font-body);
+    font-size: var(--fs-xs);
+    font-style: italic;
+    line-height: 1.7;
+    opacity: 0.9;
+    margin-bottom: 0.5rem;
+    color: var(--text-primary);
+}
+
+.quote-source {
+    font-family: var(--font-heading);
+    font-size: var(--fs-xs);
+    color: var(--accent-rose-gold);
+}
+
+.footer-message {
+    font-family: var(--font-body);
+    font-size: var(--fs-xs);
+    line-height: 1.7;
+    max-width: 450px;
+    margin: 0 auto 1.25rem;
+    opacity: 0.8;
+    color: var(--text-secondary);
+}
+
+.footer-hearts {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
+    margin-bottom: 1.25rem;
+}
+
+.footer-hearts svg {
+    animation: pulse 2s infinite;
+    color: var(--accent-rose-gold);
+    width: 18px;
+    height: 18px;
+}
+
+.footer-hearts svg:nth-child(2) {
+    animation-delay: 0.25s;
+}
+
+.footer-hearts svg:nth-child(3) {
+    animation-delay: 0.5s;
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    50% {
+        transform: scale(1.15);
+        opacity: 0.8;
+    }
+}
+
+.copyright {
+    font-size: 0.7rem;
+    opacity: 0.5;
+    color: var(--text-muted);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .footer {
+        padding: 2.5rem 1rem 2rem;
+    }
+
+    .couple-script {
+        font-size: var(--fs-xl);
+    }
+
+    .footer-quote {
+        padding: 1rem;
+        margin: 0 0.5rem 1.5rem;
+    }
+}

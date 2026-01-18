@@ -1,0 +1,67 @@
+:root {
+  /* Colors - Elegant Dark Romantic & Rose Gold Palette */
+  --bg-gradient-start: #1a0f14;
+  --bg-gradient-middle: #28181f;
+  --bg-gradient-end: #1f1419;
+  --bg-primary: #1a0f14;
+  --bg-secondary: #2a1d24;
+  --bg-overlay: rgba(26, 15, 20, 0.92);
+  --bg-card: rgba(42, 29, 36, 0.75);
+
+  --text-primary: #e8d5d0;
+  --text-secondary: #cbb5af;
+  --text-heading: #f4e8e4;
+  --text-muted: #9d8075;
+
+  --accent-rose-gold: #d4a574;
+  --accent-gold: #c9a876;
+  --accent-copper: #b8885e;
+  --accent-blush: #d4a5a5;
+  --accent-light: rgba(212, 165, 116, 0.15);
+
+  --white: #FFFFFF;
+  --white-transparent: rgba(255, 255, 255, 0.9);
+
+  /* Gradient Backgrounds */
+  --gradient-primary: linear-gradient(135deg, #1a0f14 0%, #28181f 50%, #1f1419 100%);
+  --gradient-secondary: linear-gradient(180deg, #1a0f14 0%, #2a1d24 100%);
+  --gradient-overlay: linear-gradient(to bottom, rgba(26, 15, 20, 0.95), rgba(42, 29, 36, 0.95));
+  --gradient-card: linear-gradient(135deg, rgba(42, 29, 36, 0.8) 0%, rgba(31, 20, 25, 0.8) 100%);
+
+  /* Fonts - Elegant Typography */
+  --font-heading: 'Cormorant Garamond', serif;
+  --font-body: 'Josefin Sans', sans-serif;
+  --font-script: 'Great Vibes', cursive;
+  --font-accent: 'Cinzel', serif;
+
+  /* Font Sizes - Responsive Scale */
+  --fs-xs: clamp(0.75rem, 0.7rem + 0.25vw, 0.875rem);
+  --fs-sm: clamp(0.875rem, 0.8rem + 0.35vw, 1rem);
+  --fs-base: clamp(1rem, 0.9rem + 0.5vw, 1.125rem);
+  --fs-md: clamp(1.125rem, 1rem + 0.6vw, 1.25rem);
+  --fs-lg: clamp(1.25rem, 1.1rem + 0.75vw, 1.5rem);
+  --fs-xl: clamp(1.5rem, 1.3rem + 1vw, 2rem);
+  --fs-2xl: clamp(2rem, 1.7rem + 1.5vw, 2.75rem);
+  --fs-3xl: clamp(2.5rem, 2rem + 2.5vw, 4rem);
+  --fs-script: clamp(2.5rem, 2rem + 2.5vw, 4.5rem);
+
+  /* Spacing */
+  --section-padding: 3rem 1rem;
+
+  /* Borders & Shadows */
+  --border-gold: 1px solid rgba(212, 165, 116, 0.3);
+  --shadow-soft: 0 8px 32px rgba(0, 0, 0, 0.35);
+  --shadow-glow: 0 0 25px rgba(212, 165, 116, 0.25);
+}
+
+@media (min-width: 768px) {
+  :root {
+    --section-padding: 5rem 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  :root {
+    --section-padding: 6rem 3rem;
+  }
+}

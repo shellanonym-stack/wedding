@@ -1,0 +1,166 @@
+@import './styles/variables.css';
+@import './styles/global.css';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+.App {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  background: var(--gradient-primary);
+  background-attachment: fixed;
+  color: var(--text-primary);
+  line-height: 1.6;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* Disable fixed background on mobile for performance */
+@media (max-width: 768px),
+(hover: none) and (pointer: coarse) {
+  body {
+    background-attachment: scroll;
+  }
+}
+
+#root {
+  min-height: 100vh;
+  min-height: 100dvh;
+}
+
+/* Section styles */
+.section {
+  padding: var(--section-padding);
+  position: relative;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.section-title {
+  font-family: var(--font-script);
+  font-size: var(--fs-3xl);
+  color: var(--text-heading);
+  text-align: center;
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+/* Scroll reveal animations - optimized */
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  will-change: opacity, transform;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--accent-rose-gold);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-copper);
+}
+
+/* Selection color */
+::selection {
+  background: rgba(212, 165, 116, 0.3);
+  color: var(--text-heading);
+}
+
+/* Focus styles for accessibility */
+:focus-visible {
+  outline: 2px solid var(--accent-rose-gold);
+  outline-offset: 2px;
+}
+
+/* Smooth image loading */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Hardware acceleration for heavy animations */
+.gpu-accelerated {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+/* Button reset */
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+/* Link styles */
+a {
+  color: var(--accent-rose-gold);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--accent-copper);
+}
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Print styles */
+@media print {
+
+  .music-player,
+  .falling-petals-container,
+  .scroll-indicator {
+    display: none !important;
+  }
+}
